@@ -6,6 +6,14 @@
 		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
 		{{- end -}}
 	{{- end -}}
+	<style>
+	  .center-text {
+	    text-align: center; /* Centers the text horizontally */
+	    /*border: 1px solid black;  For visualization 
+	    padding: 20px;*/
+	  }
+	</style>
+	<link rel="pgpkey" href="https://github.com/moffysky.gpg">
 {{ end }}
 
 {{ define "main" }}
@@ -26,6 +34,11 @@
 			<nav id="home-nav" class="site-nav">
 				{{ partialCached "menu.html" . }}
 			</nav>
+		 <div class="center-text">
+			<p>Current Fronters:</p>
+			<div data-pkfronters-system="tvrch" data-pkfronters-type="card" data-pkfronters-options="dn, !prns"></div>
+			<script src="https://irys.cc/fronters/pkfronters.js" async></script>
+		 </div>
 		</div>
 		<div id="home-footer">{{ partialCached "single-footer.html" . }}</div>
 	</div>
